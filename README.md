@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/victorparmar/easy-workout-log.svg?branch=master)](https://travis-ci.org/victorparmar/easy-workout-log) [![Known Vulnerabilities](https://snyk.io/test/github/victorparmar/easy-workout-log/badge.svg)](https://snyk.io/test/github/victorparmar/easy-workout-log)
+[![Build Status](https://travis-ci.org/victorparmar/easy-workout-log.svg?branch=master)](https://travis-ci.org/victorparmar/easy-workout-log) [![Known Vulnerabilities](https://snyk.io/test/github/victorparmar/easy-workout-log/badge.svg)](https://snyk.io/test/github/victorparmar/easy-workout-log) [![license](https://img.shields.io/github/license/victorparmar/easy-workout-log.svg)](https://choosealicense.com/licenses/) [![GitHub release](https://img.shields.io/github/tag/victorparmar/easy-workout-log.svg)](https://ewolo.fitness) 
 
 # Easy Workout Log
 
