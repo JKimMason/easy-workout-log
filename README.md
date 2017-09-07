@@ -35,3 +35,8 @@ https://marmelab.com/blog/2017/02/06/react-is-slow-react-is-fast.html
 # License
 
 See [LICENSE](LICENSE)
+
+## Support on Beerpay
+Hey dude! Help me out for a couple of :beers:!
+
+[![Beerpay](https://beerpay.io/victorparmar/easy-workout-log/badge.svg?style=beer-square)](https://beerpay.io/victorparmar/easy-workout-log)  [![Beerpay](https://beerpay.io/victorparmar/easy-workout-log/make-wish.svg?style=flat-square)](https://beerpay.io/victorparmar/easy-workout-log?focus=wish)
