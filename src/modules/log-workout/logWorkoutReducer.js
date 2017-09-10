@@ -109,11 +109,11 @@ const logWorkoutReducer = (state = initialState, action) => {
 
         exercises.push({
           name: name ? name : 'squats',
-          reps: reps ? reps : '8',
-          weight: weight ? weight : '100',
-          sets: sets ? sets : '1',
-          tempo: tempo ? tempo : '101',
-          rest: rest ? rest : '60',
+          reps: (reps !== undefined && reps !== null) ? String(reps) : '8',
+          weight: (weight !== undefined && weight !== null) ? String(weight) : '100',
+          sets: (sets !== undefined && sets !== null) ? String(sets) : '1',
+          tempo: (tempo !== undefined && tempo !== null) ? String(tempo) : '101',
+          rest: (rest !== undefined && rest !== null) ? String(rest) : '60',
           showAdvanced: showAdvanced ? true : false,
           showProperties: true,
           setIndex: 1,
