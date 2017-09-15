@@ -7,7 +7,7 @@ import './Welcome.css';
 import logWorkoutActions from '../../modules/log-workout/logWorkoutActions';
 import iPhone6 from './iphone-6.png';
 import iPhone6EwoloProgress from './ewolo-progress-iphone-6.png';
-import iPhone6EwoloAnalytics from './ewolo-analytics-iphone-6.png';
+// import iPhone6EwoloAnalytics from './ewolo-analytics-iphone-6.png';
 import ewoloAnalyticsLaptop from './ewolo-analytics-laptop.png';
 
 // import iPhone6black from './iphone-6-black.png';
