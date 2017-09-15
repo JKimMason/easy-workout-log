@@ -7,6 +7,9 @@ import './Welcome.css';
 import logWorkoutActions from '../../modules/log-workout/logWorkoutActions';
 import iPhone6 from './iphone-6.png';
 import iPhone6EwoloProgress from './ewolo-progress-iphone-6.png';
+import iPhone6EwoloAnalytics from './ewolo-analytics-iphone-6.png';
+import ewoloAnalyticsLaptop from './ewolo-analytics-laptop.png';
+
 // import iPhone6black from './iphone-6-black.png';
 
 const features = [
@@ -107,7 +110,7 @@ class Welcome extends Component {
           <div className="container grid-lg">
             <div className="columns">
               <div className="column col-12">
-                <h3 className="text-center">Features</h3>  
+                <h3 className="text-center">Features</h3>
               </div>
             </div>
             <div className="columns">
@@ -121,11 +124,31 @@ class Welcome extends Component {
                 </div>
               </div>
               <div className="column col-3 col-md-12">
-                <img src={iPhone6} className="img-responsive centered" alt="iphone6 application ui example"/>
-                {/*<img src={iPhone6black} className="img-responsive"/>*/}
+                <img
+                  src={iPhone6}
+                  className="img-responsive centered"
+                  alt="iphone6 application ui example"/> {/*<img src={iPhone6black} className="img-responsive"/>*/}
               </div>
               <div className="column col-3 col-md-12">
-                <img src={iPhone6EwoloProgress} className="img-responsive centered" alt="iphone6 application ui progress example"/>
+                <img
+                  src={iPhone6EwoloProgress}
+                  className="img-responsive centered"
+                  alt="iphone6 application ui progress example"/>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="analytics bg-gray">
+          <div className="container grid-xl">
+            <div className="content text-center">
+              <h3>In-depth analytics</h3>
+              <div className="columns">
+                <div className="column col-12">
+                  <img
+                    src={ewoloAnalyticsLaptop}
+                    className="img-responsive centered"
+                    alt="web analytics display"/>
+                </div>
               </div>
             </div>
           </div>
@@ -140,7 +163,7 @@ class Welcome extends Component {
               <button
                 className="btn btn-welcome-log-workout margin-top-1rem"
                 onClick={this.handleBtnLogWorkoutClick}>Log a workout</button>
-              
+
             </div>
           </div>
         </section>

@@ -104,7 +104,11 @@ h3 {
   padding-top: 1rem;
 }
 
+.home .analytics {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
 .home .last-call {
   padding-top: 3rem;
 }
-
