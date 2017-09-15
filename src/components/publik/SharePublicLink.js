@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import './SharePublicLink.css';
 
 // import ewoloUtil from '../../common/ewoloUtil';
 
@@ -14,52 +16,97 @@ const mapDispatchToProps = (dispatch) => {
   return {taskStart: globalActions.taskStart, taskEnd: globalActions.taskEnd, userNotificationAdd: globalActions.userNotificationAdd};
 };
 
-const SharePublicLink = (props) => {
+class SharePublicLink extends Component {
 
-  const publicLink = props.publicLink;
-  
-  const handleShareLinkClick = (event) => {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      linkUrl: ''
+    };
+  }
+
+  handleShareLinkClick = (event) => {
     event.preventDefault();
 
-    props.taskStart();
+    this
+      .props
+      .taskStart();
 
     publikActions
-      .linkCreateAsync({linkType: publicLink.type, authToken: props.authToken, workoutId: publicLink.workoutId})
+      .linkCreateAsync({linkType: this.props.publicLink.type, authToken: this.props.authToken, workoutId: this.props.publicLink.workoutId})
       .then(body => {
         const publicUrl = 'https://ewolo.fitness/public/' + body.id;
 
-        if ('twitter' === props.type) {
-          const text = publicLink.type === 'workout-details'
-            ? `Just logged a workout for ${publicLink.workoutDate}: `
+        if ('twitter' === this.props.type) {
+          const text = this.props.publicLink.type === 'workout-details'
+            ? `Just logged a workout for ${this.props.publicLink.workoutDate}: `
             : '';
           const twitterUrl = `https://twitter.com/intent/tweet?text=${window.encodeURIComponent(text)}&url=${window.encodeURIComponent(publicUrl)}&hashtags=TrackProgress&via=EwoloFitness`;
           window.location = twitterUrl;
+        } else { // only need to set state and trigger re-render if not switching urls
+          this.setState({linkUrl: publicUrl});
         }
+
       })
       .catch(err => {
         console.error(err);
-        props.userNotificationAdd({type: 'ERROR', text: 'Error while creating public link'});
+        this
+          .props
+          .userNotificationAdd({type: 'ERROR', text: 'Error while creating public link'});
       })
       .then(() => {
-        props.taskEnd();
+        this
+          .props
+          .taskEnd();
       });
   }
 
-  const renderIcon = () => {
-    if ('twitter' === props.type) {
+  renderIcon = () => {
+    if ('twitter' === this.props.type || 'link' === this.props.type) {
       return (
-        <i className="fa fa-twitter" aria-hidden="true"></i>
+        <i className={"fa fa-" + this.props.type} aria-hidden="true"></i>
       );
     }
 
     return null;
   }
 
-  return (
-    <div>
-      {renderIcon()}&nbsp;<a href="" onClick={handleShareLinkClick}>{props.children}</a>
-    </div>
-  );
+  renderContent = () => {
+    if (this.state.linkUrl) {
+      /*
+      return (
+        <span><input
+          className="share-public-link-content"
+          type="text"
+          value={this.state.linkUrl}
+          readOnly="true"/>
+          <i className="share-public-link-content fa fa-copy" aria-hidden="true"></i>
+        </span>
+      );
+      */
+      return (<input
+        className="share-public-link-content"
+        type="text"
+        value={this.state.linkUrl}
+        readOnly="true"/>);
+    }
+
+    return (
+      <a
+        className="share-public-link-content"
+        href=""
+        onClick={this.handleShareLinkClick}>{this.props.children}</a>
+    )
+  }
+
+  render() {
+    return (
+      <div className="share-public-link">
+        {this.renderIcon()}{this.renderContent()}
+      </div>
+    );
+  }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(SharePublicLink);

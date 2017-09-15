@@ -1,0 +1,7 @@
+.share-public-link:not(:first-child) {
+  margin-top: 0.5rem;
+}
+
+.share-public-link-content {
+  margin-left: 0.3rem;
+}

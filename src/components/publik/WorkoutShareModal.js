@@ -19,6 +19,7 @@ class WorkoutShareModal extends Component {
         size="sm"
         title="Share workout">
         <SharePublicLink type='twitter' publicLink={publicLink}>Tweet workout details</SharePublicLink>
+        <SharePublicLink type='link' publicLink={publicLink}>Get public link</SharePublicLink>
       </SimpleModal>
     );
   }
