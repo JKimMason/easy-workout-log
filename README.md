@@ -28,7 +28,42 @@ https://github.com/facebookincubator/create-react-app/issues/1341
 Dry run: `release-it -n -d`  
 Release: `release-it`
 
-## React performance
+## React
+
+### Component lifecycle
+
+- `constructor`
+  - Set initial state via this.state = { ... }.
+  - Bind callbacks.
+  - Do not subscribe to events, dispatch redux actions, or otherwise cause side effects.
+
+- `componentWillMount`
+  - Similar to the constructor, but can cause side effects.
+  - When possible, use constructor or componentDidMount instead.
+  - Main use case is subscribing to events and dispatching actions in non-browser environments.
+
+- update `this.state` (done by react)
+
+- `render`
+  - Do not call `this.setState()`.
+  - Do not cause side effects.
+  - Just create an element and return it.
+
+- `componentDidMount`
+  - Subscribe to events.
+  - Dispatch actions.
+  - Make any necessary calls to the DOM.
+  - Not called in non-browser evironments, as there is no DOM to mount into.
+
+Note that state doesn't change immediately: When you call `this.setState()`, React will not immediately update `this.state`. Instead, an update will be queued for some point in the future. Note that in the constructor, you can directly assign to `this.state`, and so any changes will happen immediately.
+
+The `componentWillMount` method can accomplish many of the same tasks as constructor and `componentDidMount`. You can call `this.setState()` to change state, and can also cause side effects that change the input props. So why avoid `componentWillMount`?
+
+If you cause a change in `props` in `componentDidMount`, it is obvious that the component will need to re-render. However, if you cause a change in props within `componentWillMount`, React’s behavior is far from obvious. When a component’s props change within `componentWillMount`, the following call to render will still use the old props.
+
+The `componentWillMount` method can accomplish many of the same tasks as constructor and `componentDidMount`. However, unless you’re using server-side rendering, it cannot accomplish any more than other lifecycle methods. Avoiding it makes it easier to reason about your components.
+
+### Performance
 
 https://marmelab.com/blog/2017/02/06/react-is-slow-react-is-fast.html
 

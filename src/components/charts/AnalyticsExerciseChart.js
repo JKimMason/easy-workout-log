@@ -37,11 +37,8 @@ class AnalyticsExerciseChart extends React.Component {
     this.setState(newState);
   }
 
-  componentWillMount() {
-    this.updateDimensions();
-  }
-
   componentDidMount() {
+    this.updateDimensions();
     window.addEventListener('resize', this.updateDimensions);
   }
 
