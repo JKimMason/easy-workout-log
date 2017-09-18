@@ -7,7 +7,7 @@ const Footer = (props) => {
 
   return (
     <footer className="bg-gray">
-      <section id="copyright" className="grid-footer grid-xl">
+      <section id="copyright" className="container grid-xl">
         <div className="columns">
           <div className="column col-md-12 col-8">
             <div className="r">
