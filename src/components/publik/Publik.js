@@ -67,7 +67,7 @@ class Publik extends Component {
         <div className="container grid-md section-content">
           <div className="columns">
             <div className="column col-12">
-              Workout data for {data.date}
+              {data.userName} logged a workout for {data.date}
             </div>
           </div>
         </div>
