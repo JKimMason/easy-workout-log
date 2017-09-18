@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-// import Chartist from 'chartist';
-
-// import ewoloUtil from '../../common/ewoloUtil';
+// import Chartist from 'chartist'; import ewoloUtil from
+// '../../common/ewoloUtil';
 
 import './Publik.css';
 
@@ -148,10 +147,14 @@ const renderTable = (workoutBreakdown) => {
         {workoutBreakdown
           .labels
           .map((exerciseName, index) => {
+            let value = workoutBreakdown.series[index];
+            if (!Number.isInteger(value)) {
+              value = value.toFixed(2);
+            }
             return (
               <tr>
                 <td>{exerciseName}</td>
-                <td className="text-center">{workoutBreakdown.series[index]}</td>
+                <td className="text-center">{value}</td>
               </tr>
             );
           })
