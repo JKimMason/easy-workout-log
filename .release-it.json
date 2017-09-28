@@ -1,0 +1,24 @@
+{
+  "verbose": true,
+  "pkgFiles": ["package.json", "package-lock.json"],
+  "requireCleanWorkingDir": true,
+  "src": {
+    "beforeStartCommand": "./e2e.sh && CI=true npm test",
+    "afterReleaseCommand": "git describe --abbrev=0 --tags"
+  },
+  "npm": {
+    "publish": false
+  },
+  "github": {
+    "release": false
+  },
+  "prompt": {
+    "src": {
+      "status": true,
+      "tag": true,
+      "release": false,
+      "publish": false
+    }
+  }
+}
+
