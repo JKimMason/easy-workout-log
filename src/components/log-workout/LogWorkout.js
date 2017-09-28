@@ -144,8 +144,6 @@ class LogWorkout extends Component {
           units
         });
 
-      // ewoloUtil.scrollElementIntoView(this.refs.logExerciseLast);
-      // ewoloUtil.scrollElementIntoView(this.refs.btnAddExercise);
       window.scrollBy(0, 200); // scrolling to btnAddExercise on safari makes the button go all the way to the top :(
 
       return;
@@ -304,7 +302,6 @@ class LogWorkout extends Component {
                   <div className="col-2 text-center">
                     <button
                       id="btn-add-exercise"
-                      ref="btnAddExercise"
                       className="btn btn-action circle btn-exercise-action tooltip"
                       data-tooltip="Add exercise"
                       type="button"

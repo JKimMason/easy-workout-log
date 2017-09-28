@@ -31,6 +31,8 @@ const UserNotificationBar = (props) => {
       });
   }
 
+  console.log('wtf');
+
   return (
     <div>
       <div className="container grid-xs">

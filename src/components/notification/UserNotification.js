@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 
-import ewoloUtil from '../../common/ewoloUtil';
+// import ewoloUtil from '../../common/ewoloUtil';
 
 import SharePublicLink from '../publik/SharePublicLink';
 
@@ -32,9 +32,11 @@ class UserNotification extends Component {
 
   componentDidMount() {
     // only scroll the top one into view if not read
+    /*
     if (this.props.index === 0 && !this.props.userNotification.isRead) {
       ewoloUtil.scrollElementIntoView(this.refs[this.refUserNotification]);
     }
+    */
   }
 
   render() {
@@ -47,7 +49,6 @@ class UserNotification extends Component {
       <div className="columns">
         <div className="column col-xs-12">
           <div
-            ref={this.refUserNotification}
             className={"toast user-notification " + getNotificationClassName(this.props.userNotification.type)}>
             <button
               className="btn btn-clear float-right"
