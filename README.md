@@ -30,6 +30,22 @@ Release: `release-it`
 
 ## React
 
+### React 16 upgrade
+
+Note that there is a really weird error: `addComponentAsRefTo(...): Only a ReactOwner can have refs. You might be adding a ref to a component that was not created inside a component's `render` method,` which does not play well with redux. Currently, the analytics chart is broken because it uses refs. Fixes via:
+
+```
+this.chartist = new Chartist[type]('#chart', data, options, responsiveOptions);
+
+...
+
+return _react2.default.createElement(
+        'div',
+        { className: 'ct-chart ' + (className || ''), id: 'chart', style: style },
+        childrenWithProps
+      );
+```
+
 ### Component lifecycle
 
 - `constructor`
