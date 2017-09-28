@@ -22,14 +22,12 @@ var ConnectedRouter = function (_Component) {
       args[_key] = arguments[_key];
     }
 
-    
     return _ret = (_temp = (_this = _possibleConstructorReturn(this, _Component.call.apply(_Component, [this].concat(args))), _this), _this.handleLocationChange = function (location) {
       _this.store.dispatch({
         type: LOCATION_CHANGE,
         payload: location
       });
-      // eslint-disable-next-line
-    }, _temp), _possibleConstructorReturn(_this, _ret);
+    }, _temp), _possibleConstructorReturn(_this, _ret); // eslint-disable-line no-sequences
   }
 
   ConnectedRouter.prototype.componentWillMount = function componentWillMount() {
