@@ -4,7 +4,6 @@ footer {
   bottom: 0;
 
   color: #acb3c2;
-  margin: 1.5rem 1.5rem;
 }
 
 footer a {
@@ -18,4 +17,8 @@ footer .r {
 footer a.social-icon {
   font-size: 1.4rem;
   margin-right: 0.6rem;
+}
+
+#copyright {
+  padding: 1rem 1rem;
 }
