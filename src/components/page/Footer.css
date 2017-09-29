@@ -3,7 +3,6 @@ footer {
   width: 100%;
   bottom: 0;
 
-  color: #acb3c2;
 }
 
 footer a {
@@ -21,4 +20,5 @@ footer a.social-icon {
 
 #copyright {
   padding: 1rem 1rem;
+  color: #acb3c2;
 }
