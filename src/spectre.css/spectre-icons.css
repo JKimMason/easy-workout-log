@@ -1,4 +1,4 @@
-/*! Spectre.css Icons | MIT License | github.com/picturepan2/spectre */
+/*! Spectre.css Icons v0.4.4 | MIT License | github.com/picturepan2/spectre */
 .icon {
   box-sizing: border-box;
   display: inline-block;
@@ -18,6 +18,29 @@
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.icon.icon-2x {
+  font-size: 1.6rem;
+}
+
+.icon.icon-3x {
+  font-size: 2.4rem;
+}
+
+.icon.icon-4x {
+  font-size: 3.2rem;
+}
+
+.accordion .icon,
+.btn .icon,
+.toast .icon,
+.menu .icon {
+  vertical-align: -10%;
+}
+
+.btn-lg .icon {
+  vertical-align: -15%;
 }
 
 .icon-arrow-down::before,
@@ -106,7 +129,7 @@
   border-top: .3em solid currentColor;
   content: "";
   height: 0;
-  transform: translate(-50%, -25%); 
+  transform: translate(-50%, -25%);
   width: 0;
 }
 
@@ -593,11 +616,4 @@
   height: .5em;
   transform: translate(-50%, -40%) rotate(-135deg);
   width: .5em;
-}
-
-.accordion .icon,
-.btn .icon,
-.toast .icon,
-.menu .icon {
-  vertical-align: -10%;
 }

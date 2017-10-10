@@ -4,7 +4,7 @@
 
 .navbar {
   min-height: 4rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   /*border-bottom: 1px solid #50596c;*/
 }
 
@@ -16,7 +16,7 @@
 }
 
 .navbar .btn {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .navbar .btn-link {
@@ -24,7 +24,7 @@
 }
 
 .navbar .date {
-  font-size: 70%;
+  font-size: 80%;
 }
 
 .navbar .dropdown-toggle .icon {
@@ -62,19 +62,19 @@
 }
 */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .navbar .navbar-content {
     display: none;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .navbar .navbar-content .xtra {
     display: none;
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .navbar .navbar-content .xtra {
     display: block;
   }

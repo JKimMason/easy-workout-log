@@ -1,4 +1,4 @@
-/*! Spectre.css Experimentals | MIT License | github.com/picturepan2/spectre */
+/*! Spectre.css Experimentals v0.4.4 | MIT License | github.com/picturepan2/spectre */
 .calendar {
   border: .05rem solid #e7e9ed;
   border-radius: .1rem;
@@ -15,7 +15,7 @@
   display: flex;
   display: -ms-flexbox;
   -ms-flex-align: center;
-  font-size: .8rem;
+  font-size: .9rem;
   padding: .4rem;
 }
 
@@ -41,11 +41,11 @@
   background: #f8f9fa;
   border-bottom: .05rem solid #e7e9ed;
   color: #acb3c2;
-  font-size: .6rem;
+  font-size: .7rem;
 }
 
 .calendar .calendar-body {
-  color: #727e96;
+  color: #667189;
 }
 
 .calendar .calendar-date {
@@ -60,8 +60,9 @@
   background: transparent;
   border: .05rem solid transparent;
   border-radius: 50%;
-  color: #727e96;
+  color: #667189;
   cursor: pointer;
+  font-size: .7rem;
   height: 1.4rem;
   line-height: 1rem;
   outline: none;
@@ -76,26 +77,26 @@
 }
 
 .calendar .calendar-date .date-item.date-today {
-  border-color: #e4e6f6;
-  color: #5764c6;
+  border-color: #e5e5f9;
+  color: #5755d9;
 }
 
 .calendar .calendar-date .date-item:focus {
-  box-shadow: 0 0 0 .1rem rgba(87, 100, 198, .2);
+  box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
 }
 
 .calendar .calendar-date .date-item:focus,
 .calendar .calendar-date .date-item:hover {
-  background: #fbfbfe;
-  border-color: #e4e6f6;
-  color: #5764c6;
+  background: #fefeff;
+  border-color: #e5e5f9;
+  color: #5755d9;
   text-decoration: none;
 }
 
 .calendar .calendar-date .date-item:active,
 .calendar .calendar-date .date-item.active {
-  background: #4c59c2;
-  border-color: #3e4cb6;
+  background: #4b48d6;
+  border-color: #3634d2;
   color: #fff;
 }
 
@@ -120,7 +121,7 @@
 }
 
 .calendar .calendar-range::before {
-  background: #eff1fa;
+  background: #f1f1fc;
   content: "";
   height: 1.4rem;
   left: 0;
@@ -139,7 +140,7 @@
 }
 
 .calendar .calendar-range .date-item {
-  color: #5764c6;
+  color: #5755d9;
 }
 
 .calendar.calendar-lg .calendar-body {
@@ -195,11 +196,11 @@
 }
 
 .calendar.calendar-lg .calendar-event {
-  background: #eff1fa;
+  background: #f1f1fc;
   border-radius: .1rem;
-  color: #5764c6;
+  color: #5755d9;
   display: block;
-  font-size: .6rem;
+  font-size: .7rem;
   margin: .1rem auto;
   overflow: hidden;
   padding: 3px 4px;
@@ -452,6 +453,30 @@
   }
 }
 
+.filter .filter-tag#tag-0:checked ~ .filter-nav .chip[for="tag-0"],
+.filter .filter-tag#tag-1:checked ~ .filter-nav .chip[for="tag-1"],
+.filter .filter-tag#tag-2:checked ~ .filter-nav .chip[for="tag-2"],
+.filter .filter-tag#tag-3:checked ~ .filter-nav .chip[for="tag-3"],
+.filter .filter-tag#tag-4:checked ~ .filter-nav .chip[for="tag-4"],
+.filter .filter-tag#tag-5:checked ~ .filter-nav .chip[for="tag-5"],
+.filter .filter-tag#tag-6:checked ~ .filter-nav .chip[for="tag-6"],
+.filter .filter-tag#tag-7:checked ~ .filter-nav .chip[for="tag-7"],
+.filter .filter-tag#tag-8:checked ~ .filter-nav .chip[for="tag-8"] {
+  background: #5755d9;
+  color: #fff;
+}
+
+.filter .filter-tag#tag-1:checked ~ .filter-body .filter-item:not([data-tag~="tag-1"]),
+.filter .filter-tag#tag-2:checked ~ .filter-body .filter-item:not([data-tag~="tag-2"]),
+.filter .filter-tag#tag-3:checked ~ .filter-body .filter-item:not([data-tag~="tag-3"]),
+.filter .filter-tag#tag-4:checked ~ .filter-body .filter-item:not([data-tag~="tag-4"]),
+.filter .filter-tag#tag-5:checked ~ .filter-body .filter-item:not([data-tag~="tag-5"]),
+.filter .filter-tag#tag-6:checked ~ .filter-body .filter-item:not([data-tag~="tag-6"]),
+.filter .filter-tag#tag-7:checked ~ .filter-body .filter-item:not([data-tag~="tag-7"]),
+.filter .filter-tag#tag-8:checked ~ .filter-body .filter-item:not([data-tag~="tag-8"]) {
+  display: none;
+}
+
 .filter .filter-nav {
   margin: .4rem 0;
 }
@@ -461,22 +486,6 @@
   display: -ms-flexbox;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-}
-
-.filter .filter-tag#tag-all:checked ~ .filter-nav .chip[for="tag-all"],
-.filter .filter-tag#tag-action:checked ~ .filter-nav .chip[for="tag-action"],
-.filter .filter-tag#tag-roleplaying:checked ~ .filter-nav .chip[for="tag-roleplaying"],
-.filter .filter-tag#tag-shooter:checked ~ .filter-nav .chip[for="tag-shooter"],
-.filter .filter-tag#tag-sports:checked ~ .filter-nav .chip[for="tag-sports"] {
-  background: #5764c6;
-  color: #fff;
-}
-
-.filter .filter-tag#tag-action:checked ~ .filter-body .column:not([data-tag~="tag-action"]),
-.filter .filter-tag#tag-roleplaying:checked ~ .filter-body .column:not([data-tag~="tag-roleplaying"]),
-.filter .filter-tag#tag-shooter:checked ~ .filter-body .column:not([data-tag~="tag-shooter"]),
-.filter .filter-tag#tag-sports:checked ~ .filter-body .column:not([data-tag~="tag-sports"]) {
-  display: none;
 }
 
 .meter {
@@ -535,6 +544,84 @@
 
 .meter:-moz-meter-sub-sub-optimum::-moz-meter-bar {
   background: #e85600;
+}
+
+.off-canvas {
+  display: flex;
+  display: -ms-flexbox;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.off-canvas .off-canvas-sidebar {
+  background: #f8f9fa;
+  height: 100%;
+  left: 0;
+  padding: .8rem;
+  position: absolute;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform .25s ease;
+  width: 10rem;
+  z-index: 300;
+}
+
+.off-canvas .off-canvas-content {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: .8rem .8rem .8rem 4rem;
+}
+
+.off-canvas .off-canvas-checkbox:checked ~ .off-canvas-sidebar {
+  transform: translateX(0);
+}
+
+.off-canvas .off-canvas-checkbox:checked ~ .off-canvas-toggle {
+  background: rgba(69, 77, 93, .1);
+  border-color: transparent;
+  border-radius: 0;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.off-canvas .off-canvas-checkbox:checked ~ .off-canvas-toggle .icon {
+  display: none;
+}
+
+.off-canvas .off-canvas-toggle {
+  display: block;
+  left: .8rem;
+  padding-left: 0;
+  padding-right: 0;
+  position: absolute;
+  top: .8rem;
+  transition: none;
+  width: 2rem;
+  z-index: 200;
+}
+
+@media (min-width: 960px) {
+  .off-canvas .off-canvas-sidebar {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    position: static;
+    transform: translateX(0);
+  }
+  .off-canvas .off-canvas-content {
+    padding-left: .8rem;
+  }
+  .off-canvas .off-canvas-toggle {
+    display: none;
+  }
 }
 
 .parallax {
@@ -674,7 +761,7 @@
   background: #f0f1f4;
   border: 0;
   border-radius: .1rem;
-  color: #5764c6;
+  color: #5755d9;
   height: .2rem;
   position: relative;
   width: 100%;
@@ -686,18 +773,18 @@
 }
 
 .progress::-webkit-progress-value {
-  background: #5764c6;
+  background: #5755d9;
   border-radius: .1rem;
 }
 
 .progress::-moz-progress-bar {
-  background: #5764c6;
+  background: #5755d9;
   border-radius: .1rem;
 }
 
 .progress:indeterminate {
   animation: progress-indeterminate 1.5s linear infinite;
-  background: #f0f1f4 linear-gradient(to right, #5764c6 30%, #f0f1f4 30%) top left/150% 150% no-repeat;
+  background: #f0f1f4 linear-gradient(to right, #5755d9 30%, #f0f1f4 30%) top left/150% 150% no-repeat;
 }
 
 .progress:indeterminate::-moz-progress-bar {
@@ -724,13 +811,13 @@
 }
 
 .slider:focus {
-  box-shadow: 0 0 0 .1rem rgba(87, 100, 198, .2);
+  box-shadow: 0 0 0 .1rem rgba(87, 85, 217, .2);
   outline: none;
 }
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
-  background: #5764c6;
+  background: #5755d9;
   border: 0;
   border-radius: 50%;
   height: .6rem;
@@ -740,7 +827,7 @@
 }
 
 .slider::-moz-range-thumb {
-  background: #5764c6;
+  background: #5755d9;
   border: 0;
   border-radius: 50%;
   height: .6rem;
@@ -749,7 +836,7 @@
 }
 
 .slider::-ms-thumb {
-  background: #5764c6;
+  background: #5755d9;
   border: 0;
   border-radius: 50%;
   height: .6rem;
@@ -809,7 +896,7 @@
 }
 
 .slider::-ms-fill-lower {
-  background: #5764c6;
+  background: #5755d9;
 }
 
 .timeline .timeline-item {
@@ -850,7 +937,7 @@
 }
 
 .timeline .timeline-item .timeline-icon::before {
-  border: .1rem solid #5764c6;
+  border: .1rem solid #5755d9;
   border-radius: 50%;
   content: "";
   display: block;
@@ -862,8 +949,7 @@
 }
 
 .timeline .timeline-item .timeline-icon.icon-lg {
-  background: #5764c6;
-  font-size: .8rem;
+  background: #5755d9;
   line-height: 1rem;
 }
 
