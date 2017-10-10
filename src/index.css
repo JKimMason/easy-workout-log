@@ -87,6 +87,11 @@ h6 {
   display: initial;
 }
 
+.form-autocomplete .form-autocomplete-input .form-input {
+  height: 1.6rem;
+}
+
+/* TODO: check if the following are required */
 .tile .tile-title {
   font-size: 0.9rem;
 }
