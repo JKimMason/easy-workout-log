@@ -28,6 +28,8 @@ https://github.com/facebookincubator/create-react-app/issues/1341
 Dry run: `release-it -n -d`  
 Release: `release-it`
 
+Browse text-only version using `elinks`
+
 ## React
 
 ### Component lifecycle
